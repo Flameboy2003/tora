@@ -1,0 +1,9 @@
+# Generate 1000 random numbers between 0 and 1
+random_numbers <- runif(1000)
+
+# Plot a histogram to visually inspect the distribution
+hist(random_numbers, breaks = 20, main = "Histogram of Random Numbers", xlab = "Value")
+
+# Perform a statistical test for uniformity (e.g., Kolmogorov-Smirnov test)
+ks_test <- ks.test(random_numbers, "punif")
+print(ks_test)

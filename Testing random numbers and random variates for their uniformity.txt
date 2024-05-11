@@ -6,4 +6,7 @@ hist(random_numbers, breaks = 20, main = "Histogram of Random Numbers", xlab = "
 
 # Perform a statistical test for uniformity (e.g., Kolmogorov-Smirnov test)
 ks_test <- ks.test(random_numbers, "punif")
+chi<-chisq.test(table(cut(random_numbers,breaks =20)))
+print(chi)
+
 print(ks_test)
